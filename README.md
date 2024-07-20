@@ -35,7 +35,7 @@ To compile the LaTeX file into a PDF, you can use a LaTeX editor such as Overlea
 
 ## Authors
 
-- **Author Name** (with ORCID: [0000-0001-2345-6789](https://orcid.org/0000-0001-2345-6789))
+- **Anthony Kimanzi** (with ORCID: [0000-0002-6769-9616](https://orcid.org/0000-0002-6769-9616))
 
 ## License
 
