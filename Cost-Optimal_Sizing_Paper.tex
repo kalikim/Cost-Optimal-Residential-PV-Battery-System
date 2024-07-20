@@ -1,0 +1,283 @@
+%%
+%% This is file `sample-authordraft.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `authordraft')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-authordraft.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[sigconf,12pt,nonacm]{acmart}
+\settopmatter{printacmref=false} % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\usepackage{natbib,hyperref}
+\usepackage[section]{placeins}
+\usepackage{graphicx}
+\graphicspath{ {./self_con_images/} }
+
+\usepackage[official]{eurosym}
+\pagestyle{plain} % removes running headers
+%% NOTE that a single column version may be required for 
+%% submission and peer review. This can be done by changing
+%% the \doucmentclass[...]{acmart} in this template to 
+%% \documentclass[manuscript,screen,review]{acmart}
+%% 
+%% To ensure 100% compatibility, please check the white list of
+%% approved LaTeX packages to be used with the Master Article Template at
+%% https://www.acm.org/publications/taps/whitelist-of-latex-packages 
+%% before creating your document. The white list page provides 
+%% information on how to submit additional LaTeX packages for 
+%% review and adoption.
+%% Fonts used in the template cannot be substituted; margin 
+%% adjustments are not allowed.
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+
+
+
+
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+
+%%
+%% end of the preamble, start of the body of the document source.
+% Define a new command for ORCID
+\newcommand{\myorcid}[1]{\href{https://orcid.org/#1}{\texttt{ORCID: #1}}}
+
+
+
+
+\setcopyright{none}
+\begin{document}
+\settopmatter{printacmref=false}
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{Cost-Optimal Sizing of Residential  grid-tied PV and Battery System }
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+
+\author{Anthony Kimanzi\\\myorcid{0000-0002-6769-9616}}
+
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+
+
+
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\section{Abstract}
+This paper explores the integration of residential grid-tied  PV (Photovoltaic) and battery storage systems to understand better the sizing of grid-tied PV and BESS (Battery Energy Storage System). For this purpose simulation model is for power build based on Photovoltaic Geographical Information System to determine PV  power forecast and samples of energy consumption of a normal household in Austria for a period of one year in 15 minutes intervals is considered, the current cost of energy from the grid and current cost of the feed-in tariff in €/kWh is considered. Various PV sizes and Battery sizes are considered for this simulation. The effect of varying different PV sizes and battery sizes is analyzed to determine the cost-optimal system configuration. Self sufficiency(Autarky) and self-consumption are averaged to determine the cost-optimal PV and BESS configuration for a residential home.
+\section{INTRODUCTION}
+With the growing integration of grid-tied PV and BESS  installation, there is a need to do proper sizing of the PV and of BESS to have the most cost-optimal system configuration that will be able to meet customers' demands. Proper sizing of the PV and BESS helps the customer to save on cost hence improving efficiency\cite{dorsey_2019_energy} by cost saving on resources.
+
+This paper explores optimization based on energy cost and consumption, though other researches carried out, indicate that optimization of PV and BESS heavily relies on meteorological and technical elements, \citeauthor{khatib_2013_a}  explore optimal sizing of PV systems based on various approach on economic, environmental and technical details\cite{khatib_2013_a}. And adopt an Artificial intelligence algorithm to obtain the optimal configuration. According to  \citeauthor{notton_2010_optimal} They explore optimal sizing based on analyzing various inverter sizes for various PV optimization as they establish inverter efficiency curve is crucial for sizing of PV systems, they also rely on AI method (particle swarm optimization to determine the optimal configuration \cite{notton_2010_optimal}. In this paper we have abstracted the meteorological and technical details and focused on energy assessment criteria based on self-consumption, self-sufficiency and battery cycles and economic energy assessment criteria based on mean electricity price and internal return rates for comparisons,  as it is presented by Volker, Q et al [3]\citeauthor{weniger_2014_sizing} of berlin university on optimal sizing of PV and BESS( Battery Energy Storage system)\cite{weniger_2014_sizing}, and \citeauthor{hartner_2017_optimal} Austria case study.\cite{hartner_2017_optimal}
+
+This paper explores the option of using averaging of self-consumption and self-sufficiency to determine the cost-optimal PV Battery system for the clients. Previously related work by \citeauthor{weniger_2014_sizing} \cite{weniger_2014_sizing} and \citeauthor{hartner_2017_optimal} \cite{hartner_2017_optimal}  are explored in the related work section of this paper. The graphs and of different outputs are provided in the result sections and detailed discussion on each of the graphs is provided to analyze this option. From the analysis of the results, a detailed conclusion is made in the conclusion of this paper.
+\section{RELATED WORK}
+For the sizing of PV and BESS related work has been carried out though it uses a different approach. In this paper, we explore \citeauthor{weniger_2014_sizing}, approach of using Mean electricity price and \citeauthor{hartner_2017_optimal} approach of using internal Return rates. 
+
+Before diving further into this paper, we start by first demystifying the two crucial terms self-consumption\cite{butzner_2017_der} and self -sufficiency\cite{butzner_2017_der} in this domain of PV and BESS usage. Self-consumption\cite{butzner_2017_der} refers to the share of self-used electricity from the energy produced from the PV. Self-sufficiency\cite{butzner_2017_der} also referred to as Autarkiegrad refers to the share of self-used electricity in the total energy consumption per year. The higher the degree of self-sufficiency the higher the independence\cite{quaschning_2013_optimale}. The independence, in this case, refers to less over-reliance on the energy from the grid.
+\subsection{Energy Assessment Criteria}
+Self consumption(s) \cite{butzner_2017_der}, \cite{weniger_2014_sizing}
+\begin{equation}\label{eq:1}s=\frac{E_{\mathrm{DU}}+E_{\mathrm{BC}}}{E_{\mathrm{PV}}}\end{equation}
+Self sufficiency(d) \cite{butzner_2017_der}, \cite{weniger_2014_sizing}
+\begin{equation}\label{eq:2}d=\frac{E_{\mathrm{DU}}+E_{\mathrm{BD}}}{E_{\mathrm{L}}}\end{equation}
+Number of storage cycles$(n_{\mathrm{c}})$ \cite{weniger_2014_sizing}
+\begin{equation}n_{\mathrm{c}}=\frac{E_{\mathrm{BD}, \mathrm{DC}}}{E_{\mathrm{UB}}}\end{equation}
+$E_{\mathrm{DU}}$- direct consumption \newline
+$E_{\mathrm{BC}}$- energy used  for  charging the battery \newline
+$E_{\mathrm{PV}}$-PV production \newline
+$E_{\mathrm{BD}}$-Energy discharged from the battery \newline
+$E_{\mathrm{L}}$-Total energy demanded by the premise yearly \newline
+
+Self-consumption rate decreases and the degree of self-sufficiency rises with an increasing PV system size. But with larger sized PV systems the degree of self-sufficiency tends to saturate since more PV surpluses occur that cannot be used simultaneously. Both assessment criteria are usually raised by increasing battery size.\citeauthor{quaschning_2013_optimale} \cite{quaschning_2013_optimale}
+
+\subsection{Economic Assessment Criteria}
+\subsubsection{Mean electricity price} 
+\hfill\\
+To carry out an economic assessment the \citeauthor{weniger_2014_sizing}\cite{weniger_2014_sizing} use the annuity method to determine to mean electricity price, and the system with the lowest mean electricity price corresponds to the cost-optimal system. The annuity describes the annual payments of investment including interest charges and repayments for amortization of the investment within a defined period.  \newline
+
+Annuity factor (a)   
+\begin{equation}a=\frac{r}{1-(1+r)^{-n}}\end{equation}
+ $r$-rate $n$-Period of investment \newline
+ 
+ PV investment$(C_{\mathrm{PV}})$
+\begin{equation}C_{\mathrm{PV}}=I_{\mathrm{PV}} \cdot P_{\mathrm{PV}} \cdot\left(a_{\mathrm{PV}}+o_{\mathrm{PV}}\right)\end{equation}
+$I_{\mathrm{PV}}$-cost of PV \newline
+$P_{\mathrm{PV}}$-size of the PV\newline
+
+Battery investment($C_{\mathrm{B}}$)
+\begin{equation}C_{\mathrm{B}}=I_{\mathrm{B}} \cdot E_{\mathrm{BU}} \cdot\left(a_{\mathrm{B}}+o_{\mathrm{B}}\right)\end{equation}
+$I_{\mathrm{B}}$-cost of battery \newline
+$E_{\mathrm{BU}}$-size of battery\newline
+
+Cost of energy from the grid($C_{\mathrm{GP}}$)
+\begin{equation}C_{\mathrm{PV}}=I_{\mathrm{PV}} \cdot P_{\mathrm{PV}} \cdot\left(a_{\mathrm{PV}}+o_{\mathrm{PV}}\right)\end{equation}
+$p_{\mathrm{GP}}$-price of energy from the grid $(\frac{\euro{}}{kWh})$ \newline
+
+Returns of PV and BESS($R_{\mathrm{PV}}$) 
+\begin{equation}R_{\mathrm{PV}}=p_{\mathrm{PV}} \cdot E_{\mathrm{PV}} \cdot(1-s)\end{equation} \newline
+
+Mean electricity price($p_{\mathrm{EL}}$)  
+\begin{equation}p_{\mathrm{EL}}=\frac{C_{\mathrm{PV}}+C_{\mathrm{B}}+C_{\mathrm{GP}}-R_{\mathrm{PV}}}{E_{\mathrm{L}}}\end{equation}
+
+\subsubsection{Internal Return Rates(IRR)}
+\hfill\\
+To determine the most configuration optimal configuration \citeauthor{hartner_2017_optimal} \cite{hartner_2017_optimal} uses the internal rate returns and the system configurations with maximum internal rate of returns is the most optimal system. \newline
+\begin{equation}\max _{x} I R R(x) 0=\sum_{t=0}^{T} \frac{R(x)_{t}-C(x)_{t}}{(1+I R R)^{t}}\end{equation}
+\textbf{x} - PV system size [kW]\newline
+\textbf{IRR }- Internal rate of return [\%]\newline
+\textbf{R} - Revenues and savings compared to a no investment case [€] \newline
+\textbf{C} - Costs compared to a no investment case [€] \newline
+\textbf{t} - Index for time period [–] \newline
+\textbf{T} - Total lifetime of the PV system [a] \newline
+
+\begin{equation}\begin{array}{c}
+\max _{x} I R R(x) 0= \\
+-\left(c_{f i x}+c_{v a} x\right)+\sum_{t=1}^{T}\\ \frac{E(x)_{t} \theta(x)_{t} p_{r}+E(x)_{t} \left(1-\theta(x)_{t}\right) p_{f}-O p e x_{t} \cdot x}{(1+I R R)^{t}} \\
+s . t .: 0<x<x_{\max }
+\end{array}\end{equation}
+
+
+
+
+
+
+\section{APPROACH}
+In this paper, we took the average of self-consumption (\ref{eq:1}) and self-sufficiency (\ref{eq:2})  of each system configuration and above the trend of how this average was changing with change with system configuration. This average we referred to it as the Optimality.
+\begin{equation}
+   =\frac{self consumption(s)(\ref{eq:1}) + self sufficiency (d)(\ref{eq:2})}{2}
+\end{equation}
+
+\section{EVALUATION}
+In this paper we have used the following system configurations.
+\begin{itemize}
+    \item Household consumption of 4000kWh per year
+    \item PV RANGE- 1 to 15kWp
+    \item Energy cost – 26 €/kWh
+    \item Feeding Tariff – 9 €/kWh 
+    \item Hybrid Inverter
+    \item Battery capacity – 9kWh to 40kWh
+    \item \href{https://neoom-optimization-tool.azurewebsites.net/swagger . }{Source of the data }
+\end{itemize}
+We observe the following outputs and make comparisons
+\begin{itemize}
+    \item Mean Electrity Price
+    \item Optimality
+    \item Amortization Period\cite{tuovila_2019_what}
+    \item PV Return on investments in Euros(€) for a period of 25 years
+    \item PV and BESS investment in Euro (€)
+\end{itemize}
+
+\section{RESULTS}
+\subsubsection{Discussion}
+\hfill\\
+By observing Fig. \ref{fig:meanElectric} we notice the values are not robust and no meaningful conclusion can be drawn from this mean electricity price. As the PV size keeps increasing the mean electricity price keeps decreasing, hence not robust enough to be used to size the PV AND BESS.
+
+We notice an interesting trend in the optimality chart Fig. \ref{fig:optimality}. The value of optimality starts from a lower value and as the value of PV size increases the value increases until it hits an optimal value where it starts decreasing with increase in PV size.Combining the observation in optimality chart Fig.\ref{fig:amortizationPerioD} which we observed that the amortization period doesn't show any significant change after the optimality value starts decreasing.The optimal point in this setup was PV of 4kWp and we notice after 4kWp there is no significant change in amortization period.
+
+From Fig.\ref{fig:totalInvestment} we observe that the bigger the PV and BESS the bigger the investment.Hence it is unnecessary to have a big PV and BESS that u r not exploiting fully during these times of very low feed in rates.
+Fig.\ref{fig:batt} shows the effect of increasing the BESS without increasing the PV size.Increasing the BESS increases the invest cost and also a bigger BESS might not be fully exploited hence resulting to negative returns.
+Since after the highest optimality there no significant drop in amortization period, and from Fig.\ref{fig:totalInvestment} the higher the size of PV the higher the investment  hence around the highest optimality lies the cost optimal system configuration. 
+\subsubsection*{Figures}
+
+\begin{figure}
+ \textbf{MEAN ELECTRICITY PRICE}\par\medskip
+ \includegraphics[scale=0.5,width=8cm]{self_con_images/Charts_1.png}
+ \caption{Mean Electricity Price }
+ \label{fig:meanElectric}
+\end{figure}
+
+\begin{figure}
+ \textbf{OPTIMALITY}\par\medskip
+ \includegraphics[scale=0.5,width=8cm]{self_con_images/optimality.png}
+ \caption{Plot of optimality against PV size in kWp}
+ \label{fig:optimality}
+\end{figure}
+
+\begin{figure}
+ \textbf{AMORTIZATION PERIOD}\par\medskip
+ \includegraphics[scale=0.5,width=8cm]{self_con_images/Charts_3.png}
+ \caption{Amortization period in years  }
+ \label{fig:amortizationPerioD}
+\end{figure}
+
+\begin{figure}
+ \textbf{BATTERY OPTIMALITY}\par\medskip
+ \includegraphics[scale=0.5,width=8cm]{self_con_images/battoptimality.png}
+ \caption{Plot of optimality against Battery size in kWh  }
+ \label{fig:battoptimality}
+\end{figure}
+
+\begin{figure}
+ \textbf{TOTAL PV AND STORAGE INVESTMENT}\par\medskip
+ \includegraphics[scale=0.5,width=8cm]{self_con_images/Charts_4.png}
+ \caption{Total investment}
+ \label{fig:totalInvestment}
+\end{figure}
+\begin{figure}
+ \textbf{BATTERY SIZING}\par\medskip 
+ \includegraphics[scale=0.5,width=8cm]{self_con_images/Charts_5.jpeg}
+ \caption{Varrying battery sizes}
+ \label{fig:batt}
+\end{figure}
+
+\section{CONCLUSION}
+From our research, we establish that the cost-optimal is not the most profitable system. by getting the average of self-consumption and self-sufficiency we obtain the cost-optimal system configuration that ensures the customer fully exploits the system to avoid oversizing or under-sizing of the system. This also helps to ensure efficiency by saving the cost of resources\cite{dorsey_2019_energy}.Factors like customers' budgets and roof size available also affect which system is best for the customer. 
+
+\section{FUTURE WORK}
+This approach of combining the self-consumption and self-sufficiency to form optimality more robust when choosing a cost-optimal price for PV sizing. It less robust when the PV is coupled with the  BESS as we have seen in the results; there is a weak correlation between the optimally value and the cost. For future work a more robust approach is required, that establishes a strong correlation when a PV is coupled with BESS and cost. More parameters can be considered to improve current work.
+\bibliographystyle{unsrtnat}
+\bibliography{aurtakie}
+\end{document}
+\endinput
+
+
