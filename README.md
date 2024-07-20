@@ -39,5 +39,5 @@ To compile the LaTeX file into a PDF, you can use a LaTeX editor such as Overlea
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the  [LICENSE]([LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)) file for details.
 
